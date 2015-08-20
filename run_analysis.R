@@ -53,4 +53,4 @@ xtrain$subject <- subjects$V1
 # to get all the column means grouped by activity and subject we will use summarise_each
 newtidy <- xtrain %>% group_by(activity,subject) %>% summarise_each(funs(mean))
 
-write.csv(newtidy, file="./data/tidydata.csv")
+write.table(newtidy, file="./data/tidydata.txt", row.names=F)
